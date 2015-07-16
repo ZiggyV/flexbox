@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flexbox - Fixed width on big screens</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/screen.css">
+</head>
+<body>
+	<div class="navigation">
+		<button class="navigation__toggle">OPEN MENU</button>
+		<ul class="navigation__wrapper">
+			<li><a class="navigation__link" href="index.html">Standard</a></li>
+			<li><a class="navigation__link" href="animated.html">Animated</a></li>
+			<li><a class="navigation__link" href="list.html">List</a></li>
+			<li><a class="navigation__link" href="fixed.html">Fixed</a></li>
+			<li><a class="navigation__link" href="special.html">Special</a></li>
+		</ul>
+	</div>
+	
+	<div id="fixed" class="fixed-grid">
+		<h1>Fixed width on big screens</h1>
+		<div class="fixed-grid__list">
+			<div class="fixed-grid__item">
+				<figure>
+					<img src="images/example7.jpg" alt="Example 7">
+					<figcaption><p>hover text or link</p></figcaption>
+				</figure>
+			</div>
+			<div class="fixed-grid__item">
+				<div class="fixed-grid__content">
+					<h2>Portfolio item</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quas facere laboriosam reprehenderit fugiat, adipisci illo distinctio. Quasi quos error, officiis nostrum sed quis cumque quaerat ut nemo necessitatibus animi aspernatur soluta veritatis autem rem eum ab asperiores magni porro!</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="fixed-grid__list fixed-grid__list--reversed">
+			<div class="fixed-grid__item">
+				<figure>
+					<img src="images/example9.jpg" alt="Example 9">
+					<figcaption><p>hover text or link</p></figcaption>
+				</figure>
+			</div>
+			<div class="fixed-grid__item">
+				<div class="fixed-grid__content">
+					<h2>Portfolio item</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quas facere laboriosam reprehenderit fugiat, adipisci illo distinctio. Quasi quos error, officiis nostrum sed quis cumque quaerat ut nemo necessitatibus animi aspernatur soluta veritatis autem rem eum ab asperiores magni porro!</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="fixed-grid__list">
+			<div class="fixed-grid__item">
+				<figure>
+					<img src="images/example5.jpg" alt="Example 5">
+					<figcaption><p>hover text or link</p></figcaption>
+				</figure>
+			</div>
+			<div class="fixed-grid__item">
+				<div class="fixed-grid__content">
+					<h2>Portfolio item</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quas facere laboriosam reprehenderit fugiat, adipisci illo distinctio. Quasi quos error, officiis nostrum sed quis cumque quaerat ut nemo necessitatibus animi aspernatur soluta veritatis autem rem eum ab asperiores magni porro!</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flexbox - Standard grid</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/screen.css">
+</head>
+<body>
+	<div class="navigation">
+		<button class="navigation__toggle">OPEN MENU</button>
+		<ul class="navigation__wrapper">
+			<li><a class="navigation__link" href="index.html">Standard</a></li>
+			<li><a class="navigation__link" href="animated.html">Animated</a></li>
+			<li><a class="navigation__link" href="list.html">List</a></li>
+			<li><a class="navigation__link" href="fixed.html">Fixed</a></li>
+			<li><a class="navigation__link" href="special.html">Special</a></li>
+		</ul>
+	</div>
+	
+	<div id="standard" class="grid">
+		<h1>Standard grid</h1>
+		<div class="grid__row grid__row--sm">
+			<div class="grid__item">row1-1</div>
+			<div class="grid__item">
+				<div class="grid__content">
+					<h3>Vertical centered</h1>
+					<p>row1-1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur harum fugit itaque officiis perspiciatis voluptatibus magni natus provident obcaecati quaerat.</p>
+				</div>
+			</div>
+		</div>
+		<div class="grid__row grid__row--md">
+			<div class="grid__item">row2-1</div>
+			<div class="grid__item">row2-2</div>
+			<div class="grid__item">row2-3</div>
+		</div>
+		<div class="grid__row grid__row--md">
+			<div class="grid__item">row3-1</div>
+			<div class="grid__item">row3-2</div>
+			<div class="grid__item">row3-3</div>
+			<div class="grid__item">row3-4</div>
+		</div>
+		<div class="grid__row grid__row--lg">
+			<div class="grid__item">row4-1</div>
+			<div class="grid__item">row4-2</div>
+			<div class="grid__item">row4-3</div>
+			<div class="grid__item">row4-4</div>
+			<div class="grid__item">row4-5</div>
+		</div>
+		<div class="grid__row grid__row--lg">
+			<div class="grid__item">row5-1</div>
+			<div class="grid__item">row5-2</div>
+			<div class="grid__item">row5-3</div>
+			<div class="grid__item">row5-4</div>
+			<div class="grid__item">row5-5</div>
+			<div class="grid__item">row5-6</div>
+			<div class="grid__item">row5-7</div>
+		</div>
+	</div>
+
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

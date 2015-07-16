@@ -1,0 +1,792 @@
+/* ==========================================================================
+   STANDARD STYLES
+   ========================================================================== */
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #FBF9F3;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+}
+
+h1 {
+	font-size: 26px;
+	color: #092930;
+	font-weight: bold;
+	margin-bottom: 10px;
+	margin-top: 80px;
+}
+
+h2 {
+	font-size: 22px;
+	color: #5BBCC9;
+	margin-bottom: 15px;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 20px;
+	color: #FFFFFF;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+img {
+	width: 100%;
+}
+
+.arrow {
+	width: 0; 
+	height: 0;
+	border-color: #FFFFFF;
+	z-index: 10;
+}
+
+.arrow--right {
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-left: 10px solid;
+	display: none;
+}
+
+.arrow--left {
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent; 
+	border-right: 10px solid;
+	display: none;
+}
+
+.arrow--down {
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 20px solid;
+	display: block;
+}
+
+.arrow--up {
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-bottom: 20px solid;
+	display: block;
+}
+
+/* ==========================================================================
+   STYLES FOR NAVIGATION WITH FLEXBOX
+   ========================================================================== */
+.navigation {
+	background-color: #FFFFFF;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+}
+
+.navigation__toggle {
+	padding: 1rem;
+	background-color: #5BBCC9;
+	color: #FFFFFF;
+	border: none;
+	width: 100%;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.navigation__wrapper {
+	display: none;
+	flex-flow: column wrap;
+	padding: 0;
+}
+
+.navigation__wrapper--visible {
+	display: flex;
+}
+
+.navigation__wrapper a {
+	text-decoration: none;
+	padding: 1.5rem;
+	display: block;
+	color: #5BBCC9;
+	font-weight: bold;
+	text-align: center;
+	border-top: 1px solid rgba(255,255,255,0.3); 
+    border-bottom: 1px solid rgba(0,0,0,0.1); 
+}
+
+.navigation__wrapper a:hover {
+	background: #FCFCFC;
+}
+
+/* ==========================================================================
+   STYLES FOR STANDARD GRID
+   ========================================================================== */
+.grid {
+	margin: 25px 15px;
+}
+
+.grid__row {
+	display: flex;
+	flex-direction: column;
+}
+
+.grid__item {
+	display: flex;
+	flex: 1;
+	align-items: center;
+	justify-content: center;
+	min-height: 50px;
+	height: auto;
+	color: #fff;
+	text-align: center;
+	background-color: #092930;
+	border: 1px solid #FBF9F3; 
+}
+
+.grid__content {
+	min-height: 150px;
+	margin: 25px;
+	width: 80%;
+	padding: 10px 15px;
+	background-color: #5BBCC9;
+	text-align: left;
+	flex: 1 0 auto;
+}
+
+/* ==========================================================================
+   STYLES FOR ANIMATED FLEXBOX PHOTO GRID
+   ========================================================================== */
+.animated-photo-grid {
+	margin: 0 15px;
+	margin-bottom: 25px;
+}
+
+.animated-photo-grid__row {
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+.animated-photo-grid__row figure {
+	position: relative;
+	font-size: 0;
+	overflow: hidden;
+	max-height: 250px;
+}
+
+.animated-photo-grid__row--five figure:last-child {
+	flex: 1 0 50%;
+}
+
+.animated-photo-grid__row--four figure {
+	flex: 0 0 50%;
+}
+
+.animated-photo-grid__row--five figure {
+	flex: 0 0 50%;
+}
+
+.animated-photo-grid__row figure img {
+	width: 100%;
+	height: auto;
+	transition: transform .2s ease-out;
+}
+
+.animated-photo-grid__row figure img:hover {
+	transform: scale(1.1);
+}
+
+.animated-photo-grid__row figure figcaption {
+	color: #FFFFFF;
+	position: absolute;
+	font-size: 16px;
+	line-height: 20px;
+	padding: 15px;
+	background: rgba(0, 0, 0, .5);
+	transition: all .2s ease-out;
+	bottom: -90px;
+	left: 0;
+	right: 0;
+}
+
+.animated-photo-grid__row figure img:hover ~ figcaption {
+	bottom: 0;
+}
+
+/* ==========================================================================
+   STYLES SAME HEIGHT FLEXBOX LIST GRID
+   ========================================================================== */
+.same-grid {
+	margin: 0 15px;
+	margin-bottom: 15px;
+}
+
+.same-grid__list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.same-grid__item {
+	display: flex;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	width: 100%;
+}
+
+.same-grid__item:nth-child(even) {
+	padding-right: 0;
+}
+
+.same-grid__content {
+	background-color: #FFFFFF;
+	display: flex;
+	flex-direction: column;
+	padding: 15px;
+	-webkit-box-shadow: 0 0.5px 1px rgba(0,0,0,0.2);
+	box-shadow: 0 0.5px 1px rgba(0,0,0,0.2);
+}
+
+.same-grid__content p {
+	flex: 1 0 auto;
+	margin-bottom: 15px;
+}
+
+.same-grid__image {
+	height: 150px;
+	overflow: hidden;
+	margin-bottom: 15px;
+}
+
+.same-grid__image.same-grid__image--one {
+	background: url("../images/example1a.jpg") no-repeat center center;
+}
+
+.same-grid__image.same-grid__image--two {
+	background: url("../images/example6.jpg") no-repeat center center;
+}
+
+.same-grid__image.same-grid__image--three {
+	background: url("../images/example7.jpg") no-repeat center center;
+}
+
+.same-grid__content a {
+	color: #5BBCC9;
+}
+
+/* ==========================================================================
+   STYLES FOR FIXED WIDTH ON BIG SCREEN FLEXBOX GRID
+   ========================================================================== */
+.fixed-grid {
+	margin: 0 15px;
+	margin-bottom: 25px;
+}
+
+.fixed-grid__list {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 15px;
+}
+
+.fixed-grid__list:last-child {
+	margin-bottom: 25px;
+}
+
+.fixed-grid__list--reversed {
+	flex-direction: row-reverse;
+}
+
+.fixed-grid__item {
+	display: flex;
+	width: 100%;
+	background-color: #FFFFFF;
+	overflow: hidden;
+}
+
+.fixed-grid__item figure img {
+	transform: scale(1.1);
+	transition: .2s ease-out;
+}
+
+.fixed-grid__item figure:hover img {
+	transform: scale(1.4);
+}
+
+.fixed-grid__item figure {
+	position: relative;
+}
+
+.fixed-grid__item figure figcaption {
+	background: rgba(0, 0, 0, .7);
+	color: #FFFFFF;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	opacity: 0;
+	z-index: 50;
+	transition: all .2s ease-out;
+	transition-delay: 100ms;
+}
+
+.fixed-grid__item figure:hover figcaption {
+	opacity: 1;
+}
+
+.fixed-grid__item figure figcaption p {
+	position: relative;
+	font-size: 16px;
+	text-align: center;
+	margin-top: -40px;
+	top: 50%;
+	transform: translateY(-50%);
+	font-weight: bold;
+	text-transform: uppercase;
+	opacity: 0;
+	transition: all .2s ease-out;
+	-webkit-transition-delay: 200ms;
+	transition-delay: 200ms;
+}
+
+.fixed-grid__item figure:hover figcaption p{
+	transform: translateY(40px);
+	opacity: 1;
+}
+
+.fixed-grid__content {
+	padding: 15px 25px;
+}
+
+/* ==========================================================================
+   STYLES FOR SPECIAL GRID
+   ========================================================================== */
+.special-grid {
+	margin: 0 15px;
+	margin-bottom: 25px;
+}
+
+.special-grid__row {
+	display: flex;
+	flex-direction: column;
+}
+
+.special-grid__item {
+	display: flex;
+	flex: 1;
+	align-items: center;
+	color: #fff;
+	text-align: center;
+	background-color: #092930;
+	margin: 0;
+	min-height: 350px;
+	width: auto; 
+	border: 1px solid #FFFFFF;
+	/*-webkit-box-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.2);*/
+	position: relative;
+	overflow: hidden;
+}
+
+.special-grid__item:hover .special-grid__content {
+	background: rgba(0, 0, 0, .4);
+	transition: all .3s ease-out;
+	transition-delay: .4s;
+}
+
+.special-grid__item:hover .special-grid__content h3 {
+	transition: all .2s ease-out;
+	transition-delay: .4s;
+	transform: translateY(-120%);
+}
+
+.special-grid__item:hover .special-grid__content p {
+	transition: all .2s ease-out;
+	transition-delay: .4s;
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.special-grid__content {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: flex-end;
+	position: absolute;
+	padding: 15px;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0);
+	transition: all .3s ease-out;
+}
+
+.special-grid__content h3 {
+	text-transform: uppercase;
+	text-align: left;
+	line-height: 22px;
+	font-size: 24px;
+	opacity: 1;
+	bottom: 0;
+	position: absolute;
+	transition: all .3s ease-out;
+}
+
+.special-grid__content p {
+	text-align: left;
+	font-size: 18px;
+	opacity: 0;
+	transform: translateY(150%);
+	transition: all .3s ease-out;
+}
+
+.special-grid__item--1 {
+	background: url("../images/example6.jpg") no-repeat center center;
+}
+
+.special-grid__item--2 {
+	background: url("../images/example1.jpg") no-repeat center center;
+}
+
+.special-grid__item--3 {
+	background: url("../images/example2.jpg") no-repeat center center;
+	align-items: flex-end;
+	justify-content: center;
+}
+
+.special-grid__item--4 {
+	background: url("../images/example3.jpg") no-repeat center center;
+}
+
+.special-grid__item--5 {
+	background: url("../images/example4.jpg") no-repeat center center;
+}
+
+.special-grid__item--6 {
+	background: url("../images/example5.jpg") no-repeat center center;
+}
+
+.special-grid__item--7 {
+	background: url("../images/example7.jpg") no-repeat center center;
+}
+
+.special-grid__item--8 {
+	background: url("../images/example1b.jpg") no-repeat center center;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+.special-grid__item--9 {
+	background: url("../images/example9.jpg") no-repeat center center;
+}
+
+.special-grid__item--10 {
+	background: url("../images/example1d.jpg") no-repeat center center;
+}
+
+.special-grid__item--big {
+	background: none;
+	background-color: #FFFFFF;
+	color: #092930;
+}
+
+.special-grid__item--big .special-grid__content {
+	justify-content: flex-start;
+	flex: 1;
+	position: relative;
+	bottom: auto;
+}
+
+.special-grid__item--big:hover .special-grid__content {
+	background: none;
+	opacity: 1;
+	transition: none;
+}
+
+.special-grid__item--big .special-grid__content img {
+	width: 85px;
+	height: 85px;
+	border-radius: 50%;
+	margin: 15px auto;
+	margin-top: 0;
+}
+
+.special-grid__item--big .special-grid__content h3 {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	text-align: center;
+	color: #5BBCC9;
+	transform: none;
+	position: relative;
+	opacity: 1;
+}
+
+.special-grid__item--big:hover .special-grid__content h3 {
+	transform: none;
+	transition: none;
+}
+
+.special-grid__item--big .special-grid__content p {
+	text-align: center;
+	color: #092930;
+	margin-bottom: 20px;
+	opacity: 1;
+	transform: none;
+}
+
+.special-grid__item--big:hover .special-grid__content p {
+	transform: none;
+	transition: none;
+}
+
+.special-grid__item--big .special-grid__content button {
+	text-align: center;
+	background-color: #FFFFFF;
+	border: none;
+	color: #092930;
+	border: 3px solid #092930;
+	font-weight: bold;
+	cursor: pointer;
+	padding: 10px 8px;
+	font-size: 16px;
+	width: 150px;
+	margin: 0 auto;
+	margin-top: 15px;
+	transition: all .2s ease-out;
+}
+
+.special-grid__item--big .special-grid__content button:hover {
+	background-color: #092930;
+	color: #FFFFFF;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES
+   ========================================================================== */
+@media (min-width: 480px) {
+	/* ==========================================================================
+	   STANDARD STYLES
+	   ========================================================================== */
+	.arrow--right, .arrow--left {
+		display: block;
+	}	
+
+	.arrow--up, .arrow--down {
+		display: none;
+	}
+
+	/* ==========================================================================
+	   STYLES FOR STANDARD GRID
+	   ========================================================================== */
+	h1 {
+		margin-top: 89px;
+	}
+
+	.grid__row--sm {
+		flex-direction: row;
+	}
+
+	/* ==========================================================================
+	   STYLES FOR ANIMATED FLEXBOX PHOTO GRID
+	   ========================================================================== */
+	.animated-photo-grid__row--sm {
+		flex-direction: row-reverse;
+	}
+
+	.animated-photo-grid__row {
+		flex-flow: row wrap;
+	}
+	
+	/* ==========================================================================
+	   STYLES FOR SAME HEIGHT FLEXBOX LIST GRID
+	   ========================================================================== */
+	.same-grid__item {
+		width: 50%;
+	}
+
+	/* ==========================================================================
+	   STYLES FOR SPECIAL GRID
+	   ========================================================================== */
+	.special-grid__row--md {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.special-grid__item {
+		flex: 1 0 50%;
+	}
+
+	.special-grid__item--3 {
+		align-items: center;
+		justify-content: flex-end;
+	}
+
+	.special-grid__item--8 {
+		align-items: center;
+		justify-content: flex-start;
+	}
+}
+
+@media (min-width: 768px) {
+	/* ==========================================================================
+	   STYLES FOR NAVIGATION WITH FLEXBOX
+	   ========================================================================== */
+	.navigation {
+		-webkit-box-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.2);
+		box-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.2);
+	}
+
+	.navigation__toggle {
+		display: none;
+	}
+
+	.navigation__wrapper {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
+	}
+
+	.navigation__wrapper a {
+		border-top: none;
+		border-bottom: none;
+	}
+
+	/* ==========================================================================
+	   STYLES FOR STANDARD FLEXBOX GRID
+	   ========================================================================== */
+	.grid__row--md {
+		flex-direction: row;
+	}
+	
+	/* ==========================================================================
+	   STYLES FOR ANIMATED FLEXBOX PHOTO GRID
+	   ========================================================================== */
+	.animated-photo-grid__row--md {
+		flex-direction: row;
+	}
+	
+	.animated-photo-grid__row--four figure {
+		flex: 0 0 25%;
+	}
+
+	/* ==========================================================================
+	   STYLES FOR FIXED WIDTH ON BIG SCREEN FLEXBOX GRID
+	   ========================================================================== */
+	.fixed-grid__item {
+		width: 50%;
+		align-items: center;
+	}
+
+	/* ==========================================================================
+	   STYLES FOR SPECIAL GRID
+	   ========================================================================== */
+	.special-grid__item {
+		flex: 1;
+	}
+
+	/*.special-grid__item--big {
+		flex: 2;
+	}*/
+}
+
+@media (min-width: 960px) {
+	/* ==========================================================================
+	   STYLES FOR NAVIGATION WITH FLEXBOX
+	   ========================================================================== */
+	.navigation .navigation__wrapper{
+		width: 960px;
+		margin: 0 auto;
+	}
+
+	/* ==========================================================================
+	   STYLES FOR STANDARD FLEXBOX GRID
+	   ========================================================================== */
+	.grid__row--lg {
+		flex-direction: row;
+	}
+
+	/* ==========================================================================
+	   STYLES FOR ANIMATED FLEXBOX PHOTO GRID
+	   ========================================================================== */
+	.animated-photo-grid__row--lg {
+		flex-direction: row;
+	}
+
+	.animated-photo-grid__row--five figure {
+		flex: 0 0 20%;
+	}
+
+	.animated-photo-grid__row--five figure:last-child {
+		flex: 0 0 20%;
+	}
+	
+	/* ==========================================================================
+	   STYLES FOR SAME HEIGHT FLEXBOX LIST GRID
+	   ========================================================================== */
+	.same-grid__item {
+		width: 33.33%;
+	}
+
+	.same-grid__item:nth-child(even) {
+		padding-right: 10px;
+	}
+
+	.same-grid__item:nth-child(3n+3) {
+		padding-right: 0;
+	}
+
+	/* ==========================================================================
+	   STYLES FOR FIXED WIDTH ON BIG SCREEN FLEXBOX GRID
+	   ========================================================================== */
+	.fixed-grid {
+		max-width: 960px;
+		margin: 0 auto;
+	}
+
+	.fixed-grid__content {
+		text-align: center;
+	}
+
+	/* ==========================================================================
+	   STYLES FOR SPECIAL GRID
+	   ========================================================================== */
+	.special-grid {
+		max-width: 960px;
+		margin: 0 auto;
+		margin-bottom: 25px;
+	}
+}
+
+@media (min-width: 1250px) { 
+	/* ==========================================================================
+	   STYLES FOR FIXED WIDTH ON BIG SCREEN FLEXBOX GRID
+	   ========================================================================== */
+	.fixed-grid {
+		max-width: 1200px;
+	}
+
+	/* ==========================================================================
+	   STYLES FOR SPECIAL GRID
+	   ========================================================================== */
+	.special-grid {
+		max-width: 1200px;
+	}
+}
+
+@media (min-width: 1550px) { 
+	/* ==========================================================================
+	   STYLES FOR FIXED WIDTH ON BIG SCREEN FLEXBOX GRID
+	   ========================================================================== */
+	.fixed-grid {
+		max-width: 1500px;
+	}
+
+	/* ==========================================================================
+	   STYLES FOR SPECIAL GRID
+	   ========================================================================== */
+	.special-grid {
+		max-width: 1500px;
+	}
+}

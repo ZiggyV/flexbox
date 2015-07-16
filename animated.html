@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flexbox - Animated photo grid</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/screen.css">
+</head>
+<body>
+	<div class="navigation">
+		<button class="navigation__toggle">OPEN MENU</button>
+		<ul class="navigation__wrapper">
+			<li><a class="navigation__link" href="index.html">Standard</a></li>
+			<li><a class="navigation__link" href="animated.html">Animated</a></li>
+			<li><a class="navigation__link" href="list.html">List</a></li>
+			<li><a class="navigation__link" href="fixed.html">Fixed</a></li>
+			<li><a class="navigation__link" href="special.html">Special</a></li>
+		</ul>
+	</div>
+
+	<div id="animated" class="animated-photo-grid">
+		<h1>Animated photo grid with fixed height</h1>
+		<div class="animated-photo-grid__row animated-photo-grid__row--five animated-photo-grid__row--lg">
+			<figure>
+				<img src="images/example1.jpg" alt="Example 1">
+				<figcaption>Fig5. - View of stars at night.</figcaption>
+			</figure>
+			<figure>
+				<img src="images/example1c.jpg" alt="Example 1 A">
+				<figcaption>Fig4. - Eagle and mountain in USA.</figcaption>
+			</figure>
+			<figure>
+				<img src="images/example1b.jpg" alt="Example 1 B">
+				<figcaption>Fig3. - Golden Gate Bridge.</figcaption>
+			</figure>
+			<figure>
+				<img src="images/example1a.jpg" alt="Example 1 C">
+				<figcaption>Fig2. - Binoculars.</figcaption>
+			</figure>
+			<figure>
+				<img src="images/example2.jpg" alt="Example 2">
+				<figcaption>Fig1. - Rocky, snowy mountain in Norway.</figcaption>
+			</figure>
+		</div>
+
+		<div class="animated-photo-grid__row animated-photo-grid__row--four animated-photo-grid__row--md">
+			<figure>
+				<img src="images/example6.jpg" alt="Example 6">
+				<figcaption>Fig9. - Rainy day</figcaption>
+			</figure>
+			<figure>
+				<img src="images/example7.jpg" alt="Example 7">
+				<figcaption>Fig8. - Staircase ciruclar flow.</figcaption>
+			</figure>
+			<figure>
+				<img src="images/example8.jpg" alt="Example 8">
+				<figcaption>Fig7. - Abstract buildings.</figcaption>
+			</figure>
+			<figure>
+				<img src="images/example9.jpg" alt="Example 9">
+				<figcaption>Fig6. - Travellers on mountain.</figcaption>
+			</figure>
+		</div>
+
+		<div class="animated-photo-grid__row animated-photo-grid__row--five animated-photo-grid__row--lg">
+			<figure>
+				<img src="images/example3.jpg" alt="Example 3">
+				<figcaption>Fig14. - Exploring the mountains.</figcaption>
+			</figure>
+			<figure>
+				<img src="images/example1a.jpg" alt="Example 1 A">
+				<figcaption>Fig13. - Binoculars again.</figcaption>
+			</figure>
+			<figure>
+				<img src="images/example1d.jpg" alt="Example 1 D">
+				<figcaption>Fig12. - Trees from beneath.</figcaption>
+			</figure>
+			<figure>
+				<img src="images/example4.jpg" alt="Example 4">
+				<figcaption>Fig11. - Abstract building 2.</figcaption>
+			</figure>
+			<figure>
+				<img src="images/example5.jpg" alt="Example 5">
+				<figcaption>Fig10. - Endless staring.</figcaption>
+			</figure>
+		</div>
+	</div>
+
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
