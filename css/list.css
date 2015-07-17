@@ -1,0 +1,82 @@
+/* ==========================================================================
+   STYLES SAME HEIGHT FLEXBOX LIST GRID
+   ========================================================================== */
+.same-grid {
+	margin: 0 15px;
+	margin-bottom: 15px;
+}
+
+.same-grid__list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.same-grid__item {
+	display: flex;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	width: 100%;
+}
+
+.same-grid__item:nth-child(even) {
+	padding-right: 0;
+}
+
+.same-grid__content {
+	background-color: #FFFFFF;
+	display: flex;
+	flex-direction: column;
+	padding: 15px;
+	-webkit-box-shadow: 0 0.5px 1px rgba(0,0,0,0.2);
+	box-shadow: 0 0.5px 1px rgba(0,0,0,0.2);
+}
+
+.same-grid__content p {
+	flex: 1 0 auto;
+	margin-bottom: 15px;
+}
+
+.same-grid__image {
+	height: 150px;
+	overflow: hidden;
+	margin-bottom: 15px;
+}
+
+.same-grid__image.same-grid__image--one {
+	background: url("../images/example1a.jpg") no-repeat center center;
+}
+
+.same-grid__image.same-grid__image--two {
+	background: url("../images/example6.jpg") no-repeat center center;
+}
+
+.same-grid__image.same-grid__image--three {
+	background: url("../images/example7.jpg") no-repeat center center;
+}
+
+.same-grid__content a {
+	color: #5BBCC9;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES
+   ========================================================================== */
+@media (min-width: 480px) {
+	.same-grid__item {
+		width: 50%;
+	}
+}
+
+@media (min-width: 960px) {
+	.same-grid__item {
+		width: 33.33%;
+	}
+
+	.same-grid__item:nth-child(even) {
+		padding-right: 10px;
+	}
+
+	.same-grid__item:nth-child(3n+3) {
+		padding-right: 0;
+	}
+}

@@ -1,0 +1,74 @@
+/* ==========================================================================
+   STYLES FOR STANDARD GRID
+   ========================================================================== */
+.grid {
+	margin: 25px 15px;
+}
+
+.grid__row {
+	display: flex;
+	flex-direction: column;
+}
+
+.grid__item {
+	display: flex;
+	flex: 1;
+	justify-content: center;
+	min-height: 50px;
+	color: #727272;
+	background-color: #FFFFFF;
+	-webkit-box-shadow: 0px 0.5px 1px rgba(0,0,0,0.2); 
+	box-shadow: 0px 0.5px 1px rgba(0,0,0,0.2);
+	margin-bottom: 10px;
+}
+
+.grid__item--middle {
+	align-items: center;
+}
+
+.grid__content {
+	width: 100%;
+	padding: 15px;
+	background-color: #092930;
+}
+
+.grid__content p {
+	color: #727272;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES
+   ========================================================================== */
+@media (min-width: 480px) {
+	.grid__row--sm {
+		flex-direction: row;
+	}
+
+	.grid__row--sm .grid__item {
+		margin-right: 10px;
+	}
+
+	.grid__row--sm .grid__item:last-child {
+		margin-right: 0;
+	}
+}
+
+@media (min-width: 768px) {
+	.grid__row--md {
+		flex-direction: row;
+	}
+
+	.grid__row--md .grid__item {
+		margin-right: 10px;
+	}
+
+	.grid__row--md .grid__item:last-child {
+		margin-right: 0;
+	}
+}
+
+@media (min-width: 960px) {
+	.grid__row--lg {
+		flex-direction: row;
+	}
+}

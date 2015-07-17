@@ -1,0 +1,117 @@
+/* ==========================================================================
+   STYLES FOR FIXED WIDTH ON BIG SCREEN FLEXBOX GRID
+   ========================================================================== */
+.fixed-grid {
+	margin: 0 15px;
+	margin-bottom: 25px;
+}
+
+.fixed-grid__list {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 15px;
+}
+
+.fixed-grid__list:last-child {
+	margin-bottom: 25px;
+}
+
+.fixed-grid__list--reversed {
+	flex-direction: row-reverse;
+}
+
+.fixed-grid__item {
+	display: flex;
+	width: 100%;
+	background-color: #FFFFFF;
+	overflow: hidden;
+}
+
+.fixed-grid__item figure img {
+	transform: scale(1.1);
+	transition: .2s ease-out;
+}
+
+.fixed-grid__item figure:hover img {
+	transform: scale(1.4);
+}
+
+.fixed-grid__item figure {
+	position: relative;
+}
+
+.fixed-grid__item figure figcaption {
+	background: rgba(0, 0, 0, .7);
+	color: #FFFFFF;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	opacity: 0;
+	z-index: 50;
+	transition: all .2s ease-out;
+	transition-delay: 100ms;
+}
+
+.fixed-grid__item figure:hover figcaption {
+	opacity: 1;
+}
+
+.fixed-grid__item figure figcaption p {
+	position: relative;
+	font-size: 16px;
+	text-align: center;
+	margin-top: -40px;
+	top: 50%;
+	transform: translateY(-50%);
+	font-weight: bold;
+	text-transform: uppercase;
+	opacity: 0;
+	transition: all .2s ease-out;
+	-webkit-transition-delay: 200ms;
+	transition-delay: 200ms;
+	color: #FFFFFF;
+}
+
+.fixed-grid__item figure:hover figcaption p{
+	transform: translateY(40px);
+	opacity: 1;
+}
+
+.fixed-grid__content {
+	padding: 15px 25px;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES
+   ========================================================================== */
+@media (min-width: 768px) {
+	.fixed-grid__item {
+		width: 50%;
+		align-items: center;
+	}
+}
+
+@media (min-width: 960px) {
+	.fixed-grid {
+		max-width: 960px;
+		margin: 0 auto;
+	}
+
+	.fixed-grid__content {
+		text-align: center;
+	}
+}
+
+@media (min-width: 1250px) { 
+	.fixed-grid {
+		max-width: 1200px;
+	}
+}
+
+@media (min-width: 1550px) { 
+	.fixed-grid {
+		max-width: 1500px;
+	}
+}

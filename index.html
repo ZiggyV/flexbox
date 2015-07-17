@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	<title>Flexbox - Standard grid</title>
 	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/screen.css">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/standardgrid.css">
+	<link rel="stylesheet" href="css/gridception.css">
 </head>
 <body>
 	<div class="navigation">
@@ -15,47 +18,91 @@
 			<li><a class="navigation__link" href="list.html">List</a></li>
 			<li><a class="navigation__link" href="fixed.html">Fixed</a></li>
 			<li><a class="navigation__link" href="special.html">Special</a></li>
+			<li><a class="navigation__link" href="carousel.html">Carousel</a></li>
 			<li><a class="navigation__link" href="stubru.html">Stubru</a></li>
 		</ul>
 	</div>
 	
-	<div id="standard" class="grid">
+	<div class="grid">
 		<h1>Standard grid</h1>
 		<div class="grid__row grid__row--sm">
-			<div class="grid__item">row1-1</div>
 			<div class="grid__item">
 				<div class="grid__content">
-					<h3>Vertical centered</h1>
-					<p>row1-1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur harum fugit itaque officiis perspiciatis voluptatibus magni natus provident obcaecati quaerat.</p>
+					<h3>This one has much content</h1>
+					<p>row1-1: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur harum fugit itaque officiis perspiciatis voluptatibus magni natus provident obcaecati quaerat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, repudiandae, deserunt! Consectetur dicta, nesciunt ab saepe dolore alias ad ex voluptas qui quae, nemo enim quod possimus quo tempore culpa.</p>
+				</div>
+			</div>
+			<div class="grid__item">
+				<div class="grid__content">
+					<h3>This one will stretch to make up for lost space</h1>
+					<p>row1-2: Height according to biggest item when next to eachother. When underneath eachother they will the height corresponds with the content they have.</p>
 				</div>
 			</div>
 		</div>
 		<div class="grid__row grid__row--md">
-			<div class="grid__item">row2-1</div>
-			<div class="grid__item">row2-2</div>
-			<div class="grid__item">row2-3</div>
+			<div class="grid__item grid__item--middle">row2-1: easy vertical center</div>
+			<div class="grid__item grid__item--middle">row2-2</div>
+			<div class="grid__item grid__item--middle">row2-3</div>
 		</div>
 		<div class="grid__row grid__row--md">
-			<div class="grid__item">row3-1</div>
-			<div class="grid__item">row3-2</div>
-			<div class="grid__item">row3-3</div>
-			<div class="grid__item">row3-4</div>
+			<div class="grid__item grid__item--middle">row3-1</div>
+			<div class="grid__item grid__item--middle">row3-2</div>
+			<div class="grid__item grid__item--middle">row3-3</div>
+			<div class="grid__item grid__item--middle">row3-4</div>
 		</div>
-		<div class="grid__row grid__row--lg">
-			<div class="grid__item">row4-1</div>
-			<div class="grid__item">row4-2</div>
-			<div class="grid__item">row4-3</div>
-			<div class="grid__item">row4-4</div>
-			<div class="grid__item">row4-5</div>
-		</div>
-		<div class="grid__row grid__row--lg">
-			<div class="grid__item">row5-1</div>
-			<div class="grid__item">row5-2</div>
-			<div class="grid__item">row5-3</div>
-			<div class="grid__item">row5-4</div>
-			<div class="grid__item">row5-5</div>
-			<div class="grid__item">row5-6</div>
-			<div class="grid__item">row5-7</div>
+	</div>
+
+	<div class="gridception">
+		<h1 class="nomargin">Gridception</h1>
+		<div class="gridception__row gridception__row--md">
+			<div class="gridception__item gridception__item--big">
+				<div class="gridception__image gridception__image--1"></div>
+				<div class="gridception__content">
+					<h4>Titel</h4>
+					<p>No subrows.</p>
+				</div>
+				<div class="gridception__overlay"></div>
+			</div>
+			<div class="gridception__item">
+				<div class="gridception__row gridception__row--sub">
+					<div class="gridception__row gridception__row--column">
+						<div class="gridception__item">
+							<div class="gridception__image gridception__image--2"></div>
+							<div class="gridception__content">
+								<h4>Titel1</h4>
+								<p>Column in row in row.</p>
+							</div>
+							<div class="gridception__overlay"></div>
+						</div>
+						<div class="gridception__item gridception__item--vbig">
+							<div class="gridception__image gridception__image--3"></div>
+							<div class="gridception__content">
+								<h4>Titel2</h4>
+								<p>Column in row in row.</p>
+							</div>
+							<div class="gridception__overlay"></div>
+						</div>
+					</div>
+					<div class="gridception__row gridception__row--row">
+						<div class="gridception__item gridception__image--4">
+							<div class="gridception__image"></div>
+							<div class="gridception__content">
+								<h4>Titel3</h4>
+								<p>Row in row in row.</p>
+							</div>
+							<div class="gridception__overlay"></div>
+						</div>
+						<div class="gridception__item">
+							<div class="gridception__image gridception__image--5"></div>
+							<div class="gridception__content">
+								<h4>Titel4</h4>
+								<p>Row in row in row.</p>
+							</div>
+							<div class="gridception__overlay"></div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 

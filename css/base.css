@@ -1,0 +1,198 @@
+/* ==========================================================================
+   STANDARD STYLES
+   ========================================================================== */
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #FBF9F3;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+}
+
+h1 {
+	font-size: 26px;
+	color: #092930;
+	font-weight: bold;
+	margin-bottom: 10px;
+	margin-top: 70px;
+}
+
+h2 {
+	font-size: 22px;
+	color: #5BBCC9;
+	margin-bottom: 15px;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 20px;
+	color: #FFFFFF;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+h4 {
+	font-size: 26px;
+	color: #FFFFFF;
+	margin-bottom: 10px;
+	font-weight: bold; 
+}
+
+p {
+	font-size: 16px;
+	line-height: 22px;
+	color: #727272;
+}
+
+img {
+	width: 100%;
+}
+
+.arrow {
+	width: 0; 
+	height: 0;
+	border-color: #FFFFFF;
+	z-index: 10;
+}
+
+.arrow--right {
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-left: 10px solid;
+	display: none;
+}
+
+.arrow--left {
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent; 
+	border-right: 10px solid;
+	display: none;
+}
+
+.arrow--down {
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 20px solid;
+	display: block;
+}
+
+.arrow--up {
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-bottom: 20px solid;
+	display: block;
+}
+
+.nomargin {
+	margin: 0 0 10px 0 !important;
+}
+
+/* ==========================================================================
+   STYLES FOR NAVIGATION WITH FLEXBOX
+   ========================================================================== */
+.navigation {
+	background-color: #FFFFFF;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+}
+
+.navigation__toggle {
+	padding: 1rem;
+	background-color: #5BBCC9;
+	color: #FFFFFF;
+	border: none;
+	width: 100%;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.navigation__wrapper {
+	display: none;
+	flex-flow: column wrap;
+	padding: 0;
+}
+
+.navigation__wrapper--visible {
+	display: flex;
+}
+
+.navigation__wrapper a {
+	text-decoration: none;
+	padding: 1.5rem;
+	display: block;
+	color: #5BBCC9;
+	font-weight: bold;
+	text-align: center;
+	border-top: 1px solid rgba(255,255,255,0.3); 
+    border-bottom: 1px solid rgba(0,0,0,0.1); 
+}
+
+.navigation__wrapper a:hover {
+	background: #FCFCFC;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES
+   ========================================================================== */
+@media (min-width: 480px) {
+	/* ==========================================================================
+	   STANDARD STYLES
+	   ========================================================================== */
+	.arrow--right, .arrow--left {
+		display: block;
+	}	
+
+	.arrow--up, .arrow--down {
+		display: none;
+	}
+}
+
+@media (min-width: 768px) {
+	/* ==========================================================================
+	   STANDARD STYLES
+	   ========================================================================== */
+	h1 {
+		margin-top: 80px;
+	}
+
+	/* ==========================================================================
+	   STYLES FOR NAVIGATION
+	   ========================================================================== */
+	.navigation {
+		-webkit-box-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.2);
+		box-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.2);
+	}
+
+	.navigation__toggle {
+		display: none;
+	}
+
+	.navigation__wrapper {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
+	}
+
+	.navigation__wrapper a {
+		border-top: none;
+		border-bottom: none;
+	}
+}
+
+@media (min-width: 960px) {
+	/* ==========================================================================
+	   STYLES FOR NAVIGATION WITH FLEXBOX
+	   ========================================================================== */
+	.navigation .navigation__wrapper{
+		width: 960px;
+		margin: 0 auto;
+	}
+}
