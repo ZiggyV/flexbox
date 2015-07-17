@@ -24,24 +24,24 @@ $(document).ready(function(){
     var el, new_item, i, j, ref;
     // ON CLICK
     $('.arrownav__arrow').on('click', function(e) {
-    	el = $('.is-ref').removeClass('is-ref');
+    	el = $('.carousel__item--before').removeClass('carousel__item--before');
 
 		if ($(this).hasClass("carousel__navigation--right")) {
 			new_item = next(el);
-			carousel.removeClass('is-reversing');
+			carousel.removeClass('carousel__container--reversed');
 		} else {
 			new_item = prev(el);
-            carousel.addClass('is-reversing');
+            carousel.addClass('carousel__container--reversed');
 		}
 
-		new_item.addClass('is-ref').css('order', 1);
+		new_item.addClass('carousel__item--before').css('order', 1);
 		for (i = j = 2, ref = items.length; 2 <= ref ? j <= ref : j >= ref; i = 2 <= ref ? ++j : --j) {
             new_item = next(new_item).css('order', i);
         }
 
-		carousel.removeClass('is-set');
+		carousel.removeClass('no-transform');
         return setTimeout(function () {
-            return carousel.addClass('is-set');
+            return carousel.addClass('no-transform');
         }, 50);
 	});
 
@@ -59,37 +59,37 @@ $(document).ready(function(){
 	}
 
 	function leftArrowPressed() {
-		el = $('.is-ref').removeClass('is-ref');
+		el = $('.carousel__item--before').removeClass('carousel__item--before');
 
 	    new_item = prev(el);
 	    console.log(new_item);
-        carousel.addClass('is-reversing');
+        carousel.addClass('carousel__container--reversed');
 
-        new_item.addClass('is-ref').css('order', 1);
+        new_item.addClass('carousel__item--before').css('order', 1);
 		for (i = j = 2, ref = items.length; 2 <= ref ? j <= ref : j >= ref; i = 2 <= ref ? ++j : --j) {
             new_item = next(new_item).css('order', i);
         }
 
-		carousel.removeClass('is-set');
+		carousel.removeClass('no-transform');
         return setTimeout(function () {
-            return carousel.addClass('is-set');
+            return carousel.addClass('no-transform');
         }, 50);
 	}
 
 	function rightArrowPressed() {
-		el = $('.is-ref').removeClass('is-ref');
+		el = $('.carousel__item--before').removeClass('carousel__item--before');
 
 	    new_item = next(el);
-		carousel.removeClass('is-reversing');
+		carousel.removeClass('carousel__container--reversed');
 
-		new_item.addClass('is-ref').css('order', 1);
+		new_item.addClass('carousel__item--before').css('order', 1);
 		for (i = j = 2, ref = items.length; 2 <= ref ? j <= ref : j >= ref; i = 2 <= ref ? ++j : --j) {
             new_item = next(new_item).css('order', i);
         }
 
-		carousel.removeClass('is-set');
+		carousel.removeClass('no-transform');
         return setTimeout(function () {
-            return carousel.addClass('is-set');
+            return carousel.addClass('no-transform');
         }, 50);
 	}
 });

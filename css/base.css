@@ -116,6 +116,10 @@ img {
 	padding: 0;
 }
 
+.navigation__wrapper li {
+	flex: 1;
+}
+
 .navigation__wrapper--visible {
 	display: flex;
 }

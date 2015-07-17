@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" type="image/x-icon" href="images/stubru/stubrufavicon.png">
+	<title>Flexbox - Stubru homepage</title>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Roboto:700,400italic,300,300italic,400,500' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/stubru.css">
+</head>	
+<body>
+	<div id="overlay"></div>
+	<div id="sidebar">
+		<div class="sidebar__hamburger">
+			<a href="#" title="Navigation menu" class="hamburger__toggle hamburger__logo">
+				<img src="images/stubru/stubrulogo.png" alt="Stubru logo">
+			</a>
+			<a href="#" class="hamburger__toggle hamburger__tooltip">
+				<span class="hamburger__icon"><i class="fa fa-bars"></i></span>
+			</a>
+		</div>
+		<div class="sidebar__content">
+			<ul class="sidebar__menu">
+				<li class="sidebar__item sidebar__item--first">
+					<a title="Homepage" href="stubru.html"><span class="sidebar__icon"><i class="fa fa-home"></i></span>home</a>
+				</li>
+				<li class="sidebar__item sidebar__item--search">
+					<a title="Search" href="#"><span class="sidebar__icon"><i class="fa fa-search"></i></span>search</a>
+				</li>
+				<li class="sidebar__item">
+					<a title="Standard flexbox grid" href="index.html">standard</a>
+				</li>
+				<li class="sidebar__item">
+					<a title="Animated flexbox grid" href="animated.html">animated</a>
+				</li>
+				<li class="sidebar__item">
+					<a title="List grid with flexbox" href="list.html">list</a>
+				</li>
+				<li class="sidebar__item">
+					<a title="Fixed width on big screens flexbox grid" href="fixed.html">fixed</a>
+				</li>
+				<li class="sidebar__item">
+					<a title="Special grid with flexbox" href="special.html">special</a>
+				</li>
+				<li class="sidebar__item sidebar__item--last">
+					<a title="Flexbox carousel" href="carousel.html">carousel</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="grid">
+		<div class="grid_row grid__row--md">
+			<div class="grid__item grid__item--big">
+				<a href="#" title="Win de laatste Full Madness passes voor Tomorrowland">
+					<div class="grid__image grid__image--1"></div>
+					<div class="grid__content">
+						<div class="content__primair">
+							<h4>Tomorrowland</h4>
+							<h1>win de laatste full madness passes voor tomorrowland</h1>
+
+							<div class="content__secundair">
+								<p>Luister vrijdag en zaterdag naar Studio Brussel!</p>
+								<p class="content__timestamp"><span class="timestamp__icon"><i class="fa fa-clock-o"></i></span>één dag geleden</p>
+							</div>
+						</div>
+					</div>
+					<div class="grid__overlay"></div>
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="js/stubru.js"></script>
+</body>
+</html>

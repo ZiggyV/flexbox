@@ -1,0 +1,264 @@
+/* ==========================================================================
+   STANDARD STUBRU STYLES
+   ========================================================================== */
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 19px;
+	font-weight: 300;
+	color: #fff;
+}
+
+body.sidebar--active {
+	overflow: hidden;
+}
+
+@font-face {
+	font-family: 'Intro';
+	src: url("../fonts/Intro.otf") format("opentype");
+	font-weight: bold;
+}
+
+h1 {
+	font-family: 'Intro', sans-serif;
+	font-size: 3em;
+	color: #fff;
+}
+
+h4 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 17px;
+	line-height: 24px;
+	font-style: italic;
+	font-weight: 300;
+	color: #fff;
+}
+
+p {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 400;
+	color: #fff;
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+}
+
+/* ==========================================================================
+   STYLES STUBRU NAVIGATION WITH FLEXBOX
+   ========================================================================== */
+#overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(51, 51, 51, .6);
+	z-index: 100;
+	display: none;
+}
+
+body.sidebar--active #overlay {
+	display: block;
+}
+
+#sidebar {
+	background: #fff;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	width: 75%;
+	z-index: 100;
+	transition: transform .3s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	transform: translate3D(-320px, 0, 0);
+}
+
+body.sidebar--active #sidebar {
+	transform: translate3D(0, 0, 0);
+}
+
+.sidebar__content {
+	position: relative;
+	height: 100%;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch
+}
+
+.sidebar__menu {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 45px 20px 320px;
+	min-height: 100%;
+}
+
+.sidebar__item {
+	margin-bottom: 15px; 
+}
+
+.sidebar__item.sidebar__item--search {
+	margin-bottom: 40px;
+}
+
+.sidebar__item.sidebar__item--first a {
+	color: #cb030b;
+}
+
+.sidebar__item.sidebar__item--first a .sidebar__icon {
+	color: #cb030b;
+}
+
+.sidebar__item a {
+	text-decoration: none;
+	font-size: 21px;
+	line-height: 25px;
+	font-weight: 500;
+	text-transform: uppercase;
+	color: #333;
+}
+
+.sidebar__item a:hover {
+	color: #cb030b;
+}
+
+.sidebar__item a:hover .sidebar__icon {
+	color: #cb030b;
+}
+
+.sidebar__icon {
+	display: inline-block;
+	color: #333;
+	font-size: 26px;
+	font-weight: 400;
+	margin-right: 5px;
+}
+
+.sidebar__item--search .sidebar__icon {
+	font-size: 22px;
+}
+
+.sidebar__hamburger {
+	position: absolute;
+	left: 340px;
+	top: 15px;
+	z-index: 100;
+}
+
+.sidebar__hamburger .hamburger__logo {
+	position: absolute;
+	top: 0;
+	cursor: pointer;
+}
+
+.sidebar__hamburger .hamburger__logo img {
+	width: 100px;
+	height: auto;
+}
+
+.hamburger__tooltip {
+	position: absolute;
+	left: 120px;
+	top: 8px;
+	background: #fff;
+	-webkit-box-shadow: 2px 2px 0 0 rgba(50,50,50,.2);
+	box-shadow: 2px 2px 0 0 rgba(50,50,50,.2);
+	display: none;
+}
+
+.hamburger__tooltip::before {
+	content: "";
+	width: 0;
+	height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid #fff;
+	display: block;
+	position: absolute;
+	left: -8px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.hamburger__icon {
+	display: block;
+	color: #333;
+	font-weight: 400;
+	padding: 11px 14px;
+	font-size: 22px;
+}
+
+.hamburger__icon i {
+	width: 20px;
+}
+
+/* ==========================================================================
+   STYLES STUBRU FLEXBOX GRID
+   ========================================================================== */
+.grid {
+	background-color: #333;
+	padding: 25px;
+	display: flex;
+	min-height: 500px;
+	align-items: flex-end;
+}
+
+.content__primair h4 {
+	display: inline-block;
+	margin-bottom: 5px;
+	position: relative;
+	padding-bottom: 10px;
+}
+
+.content__primair h4::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 9px;
+	background: url("../images/stubru/tag-line.png") no-repeat;
+}
+
+.timestamp__icon {
+	margin-right: 5px;
+}
+
+/* ==========================================================================
+	MEDIA QUERIES
+	========================================================================== */
+@media (min-width: 420px) {
+	#sidebar {
+		width: 320px;
+	}
+}
+
+@media (min-width: 660px) {
+	.hamburger__tooltip {
+		display: block;
+	}
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 960px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}
+
+@media (min-width: 1600px) {
+
+}

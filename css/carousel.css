@@ -32,15 +32,16 @@
 	color: #FFFFFF;
 }
 
-.carousel__container.is-reversing {
+.carousel__container.carousel__container--reversed {
 	transform: translateX(-100%);
 }
 
-.carousel__container.is-set {
+.carousel__container.no-transform {
 	transform: none;
-	transition: transform .5s cubic-bezier(0.23, 1, 0.32, 1);
+	/*transition: transform .5s cubic-bezier(0.23, 1, 0.32, 1);*/
+	transition: transform .5s cubic-bezier(0.215, 0.610, 0.355, 1.000);
 }
-.carousel__item.is-ref {
+.carousel__item.carousel__item--before {
 	order: 1;
 }
 
