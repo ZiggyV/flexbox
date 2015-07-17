@@ -1,5 +1,12 @@
+/* ==========================================================================
+   STYLES FOR GRIDCEPTION FLEXBOX GRID
+   ========================================================================== */
 .gridception {
-	margin: 25px 15px;
+	margin: 25px 0;
+}
+
+.gridception h1 {
+	margin: 0 15px 15px;
 }
 
 .gridception__row {
@@ -44,16 +51,27 @@
 }
 
 .gridception__row--sub .gridception__item {
-	background-color: #092930;
 	min-height: 150px;
+}
+
+.gridception__item--big {
+	border-right: 1px solid #FFFFFF;
+	border-top: 1px solid #FFFFFF;
+	border-left: 1px solid #FFFFFF;
 }
 
 .gridception__item--vbig {
 	display: none;
 }
 
-.gridception__row--row {
-	background-color: #5BBCC9;
+.gridception__row--row .gridception__item {
+	border-right: 1px solid #FFFFFF;
+	border-top: 1px solid #FFFFFF;
+	border-left: 1px solid #FFFFFF;
+}
+
+.gridception__row--row .gridception__item:last-child {
+	border-bottom: 1px solid #FFFFFF
 }
 
 .gridception__row--column {
@@ -61,35 +79,32 @@
 	background-color: red;
 }
 
-.gridception__image {
-	min-height: 360px;
-	width: 100%;
-}
-
 .gridception__image--1 {
 	background: url("../images/example6.jpg") no-repeat center center;
-	background-size: cover;
 }
 
 .gridception__image--2 {
 	background: url("../images/example1.jpg") no-repeat center center;
-	background-size: cover;
 }
 
 .gridception__image--3 {
 	background: url("../images/example2.jpg") no-repeat center center;
-	background-size: cover;
 }
 
 .gridception__image--4 {
 	background: url("../images/example3.jpg") no-repeat center center;
-	background-size: cover;
 }
 
 .gridception__image--5 {
 	background: url("../images/example7.jpg") no-repeat center center;
+}
+
+.gridception__image {
+	min-height: 360px;
+	width: 100%;
 	background-size: cover;
 }
+
 
 /* ==========================================================================
    MEDIA QUERIES
@@ -102,6 +117,11 @@
 	.gridception__row--sub .gridception__row--row {
 		flex: 1;
 		flex-direction: row;
+	}
+
+	.gridception__row--row .gridception__item:first-child {
+		border-right: none;
+		border-bottom: 1px solid #FFFFFF;
 	}
 }
 
@@ -123,11 +143,25 @@
 	.gridception__row--sub .gridception__row--row {
 		flex-direction: column;
 	}
+	
+	.gridception__item--big {
+		border-bottom: 1px solid #FFFFFF;
+	}
+
+	.gridception__row--row .gridception__item:first-child {
+		border-right: 1px solid #FFFFFF;
+		border-left: none;
+	}
+
+	.gridception__row--row .gridception__item:last-child {
+		border-top: none;
+		border-left: none;
+	}
 }
 
 @media (min-width: 1200px) {
 	.gridception__item--big {
-		flex: 1;
+		flex: .9;
 	}
 
 	.gridception__row--column {
@@ -145,9 +179,22 @@
 	.gridception__row--sub .gridception__row--row {
 		flex-direction: row;
 	}
+
+	.gridception__row--column .gridception__item {
+		border-top: 1px solid #FFFFFF;
+		border-right: 1px solid #FFFFFF;
+	}
+
+	.gridception__row--row .gridception__item:last-child {
+		border-top: 1px solid #FFFFFF;
+	}
 }
 
 @media (min-width: 1600px) {
+	.gridception__item--big {
+		flex: .8;
+	}
+
 	.gridception__row--sub {
 		flex-direction: row;
 	}
@@ -162,5 +209,10 @@
 
 	.gridception__item--vbig {
 		display: flex;
+		border-bottom: 1px solid #FFFFFF;
+	}
+
+	.gridception__row--row .gridception__item:last-child {
+		border-top: none;
 	}
 }

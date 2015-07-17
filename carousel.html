@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<title>Flexbox - Carousel</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/carousel.css">
+</head>
+<body>
+	<div class="navigation">
+		<button class="navigation__toggle">OPEN MENU</button>
+		<ul class="navigation__wrapper">
+			<li><a class="navigation__link" href="index.html">Standard</a></li>
+			<li><a class="navigation__link" href="animated.html">Animated</a></li>
+			<li><a class="navigation__link" href="list.html">List</a></li>
+			<li><a class="navigation__link" href="fixed.html">Fixed</a></li>
+			<li><a class="navigation__link" href="special.html">Special</a></li>
+			<li><a class="navigation__link" href="carousel.html">Carousel</a></li>
+			<li><a class="navigation__link" href="stubru.html">Stubru</a></li>
+		</ul>
+	</div>
+	
+	<div class="carousel">
+		<ul class="carousel__container is-set">
+			<li class="carousel__item carousel__item--1">
+				<div class="carousel__content">
+					<h4>First carousel item</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet officia quibusdam ad quo tempore adipisci suscipit.</p>
+				</div>
+			</li>
+			<li class="carousel__item carousel__item--2">
+				<div class="carousel__content">
+					<h4>Second carousel item</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, corporis.</p>
+				</div>
+			</li>
+			<li class="carousel__item carousel__item--3">
+				<div class="carousel__content">
+					<h4>Third carousel item</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, qui expedita deserunt.</p>
+				</div>
+			</li>
+			<li class="carousel__item carousel__item--4">
+				<div class="carousel__content">
+					<h4>Fourth carousel item</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi placeat repudiandae ipsum provident itaque hic doloribus, quidem, asperiores quo! Aliquam.</p>
+				</div>
+			</li>
+			<li class="carousel__item carousel__item--5">
+				<div class="carousel__content">
+					<h4>Fifth carousel item</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				</div>
+			</li>
+			<li class="carousel__item carousel__item--6 is-ref">
+				<div class="carousel__content">
+					<h4>Sixth carousel item</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, nostrum fugit!</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<div class="arrownav">
+		<h1>Keyboard navigation</h1>
+		<div class="arrownav__content">
+			<p>Use your left and right arrow keys or click these arrows</p>
+			<div class="arrownav__icongroup">
+				<a class="arrownav__arrow">
+					<i class="fa fa-arrow-left"></i>
+				</a>
+				<a class="arrownav__arrow carousel__navigation--right">
+					<i class="fa fa-arrow-right"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/carousel.js"></script>
+</body>
+</html>
