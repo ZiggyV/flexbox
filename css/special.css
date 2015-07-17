@@ -81,46 +81,56 @@
 
 .special-grid__item--1 {
 	background: url("../images/example6.jpg") no-repeat center center;
+	background-size: cover;
 }
 
 .special-grid__item--2 {
 	background: url("../images/example1.jpg") no-repeat center center;
+	background-size: cover;
 }
 
 .special-grid__item--3 {
 	background: url("../images/example2.jpg") no-repeat center center;
+	background-size: cover;
 	align-items: flex-end;
 	justify-content: center;
 }
 
 .special-grid__item--4 {
 	background: url("../images/example3.jpg") no-repeat center center;
+	background-size: cover;
 }
 
 .special-grid__item--5 {
 	background: url("../images/example4.jpg") no-repeat center center;
+	background-size: cover;
 }
 
 .special-grid__item--6 {
 	background: url("../images/example5.jpg") no-repeat center center;
+	background-size: cover;
 }
 
 .special-grid__item--7 {
 	background: url("../images/example7.jpg") no-repeat center center;
+	background-size: cover;
 }
 
 .special-grid__item--8 {
 	background: url("../images/example1b.jpg") no-repeat center center;
+	background-size: cover;
 	align-items: flex-start;
 	justify-content: center;
 }
 
 .special-grid__item--9 {
 	background: url("../images/example9.jpg") no-repeat center center;
+	background-size: cover;
 }
 
 .special-grid__item--10 {
 	background: url("../images/example1d.jpg") no-repeat center center;
+	background-size: cover;
 }
 
 .special-grid__item--big {

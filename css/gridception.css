@@ -64,27 +64,31 @@
 .gridception__image {
 	min-height: 360px;
 	width: 100%;
-	background-size: cover;
 }
 
 .gridception__image--1 {
 	background: url("../images/example6.jpg") no-repeat center center;
+	background-size: cover;
 }
 
 .gridception__image--2 {
 	background: url("../images/example1.jpg") no-repeat center center;
+	background-size: cover;
 }
 
 .gridception__image--3 {
 	background: url("../images/example2.jpg") no-repeat center center;
+	background-size: cover;
 }
 
 .gridception__image--4 {
 	background: url("../images/example3.jpg") no-repeat center center;
+	background-size: cover;
 }
 
 .gridception__image--5 {
 	background: url("../images/example7.jpg") no-repeat center center;
+	background-size: cover;
 }
 
 /* ==========================================================================

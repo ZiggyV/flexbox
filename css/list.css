@@ -44,14 +44,19 @@
 
 .same-grid__image.same-grid__image--one {
 	background: url("../images/example1a.jpg") no-repeat center center;
+	background-size: cover;
 }
 
 .same-grid__image.same-grid__image--two {
 	background: url("../images/example6.jpg") no-repeat center center;
+	background-size: cover;
+
 }
 
 .same-grid__image.same-grid__image--three {
 	background: url("../images/example7.jpg") no-repeat center center;
+	background-size: cover;
+
 }
 
 .same-grid__content a {
