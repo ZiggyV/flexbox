@@ -27,7 +27,8 @@ body.sidebar--active {
 
 h1 {
 	font-family: 'Intro', sans-serif;
-	font-size: 3em;
+	font-size: 9vw;
+	line-height: 10vw;
 	color: #fff;
 }
 
@@ -97,7 +98,7 @@ body.sidebar--active #sidebar {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 45px 20px 320px;
+	padding: 45px 20px;
 	min-height: 100%;
 }
 
@@ -132,6 +133,35 @@ body.sidebar--active #sidebar {
 
 .sidebar__item a:hover .sidebar__icon {
 	color: #cb030b;
+}
+
+.github__link {
+	margin-top: 15px;
+	margin-bottom: 0;
+	width: 80%;
+	text-align: center;
+}
+
+.sidebar__item.github__link a:hover {
+	background-color: #b6030a;
+	color: #fff;
+}
+
+.github__link a {
+	padding: 10px 5px;
+	font-size: 16px;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	background-color: #cb030b;
+	border-radius: 10px;
+}
+
+.github__link span {
+	height: 32px;
+	margin-right: 10px;
 }
 
 .sidebar__icon {
@@ -204,11 +234,185 @@ body.sidebar--active #sidebar {
    STYLES STUBRU FLEXBOX GRID
    ========================================================================== */
 .grid {
-	background-color: #333;
-	padding: 25px;
+	background-color: #000;
+}
+
+.grid__row {
 	display: flex;
-	min-height: 500px;
+	flex-direction: column;
+	flex: 1;
+}
+
+.grid__row--middle .grid__cta {
+	display: none;
+}
+
+.grid__row--right {
+	display: none;
+}
+
+.grid__item {
+	position: relative;
+	overflow: hidden;
+	min-height: 400px;
+	display: flex;
+	flex-direction: column;
+}
+
+.item__hover {
+	border-top: 1px solid #fff;
+	border-right: 1px solid #fff;
+	border-left: 1px solid #fff;
+}
+
+.grid__link {
+	display: flex;
 	align-items: flex-end;
+	flex: 1;
+}
+
+.grid__image--tml {
+	background: url("../images/stubru/tml.jpg") no-repeat center center; 
+}
+
+.grid__image--summerism {
+	background: url("../images/stubru/summerism.jpg") no-repeat center center; 
+}
+
+.grid__image--herk {
+	background: url("../images/stubru/herk2.jpg") no-repeat center center; 
+}
+
+.grid__image--herk2 {
+	background: url("../images/stubru/herk.jpg") no-repeat center center; 
+}
+
+.grid__image--feder {
+	background: url("../images/stubru/feder.jpg") no-repeat center center; 
+}
+
+.grid__image {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-size: cover;
+	opacity: 0.8;
+	transition: transform .2s ease 0s;
+}
+
+.item__hover:hover .grid__image {
+	transform: scale(1.1);
+	transition: transform .2s ease .3s;
+}
+
+.item__hover .grid__image:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	background: rgba(0, 0, 0, .3);
+	transition: opacity .3s ease .1s;
+	opacity: 0;
+}
+
+.item__hover:hover .grid__image:before {
+	opacity: 1;
+	transition: opacity .2s ease .3s;
+}
+
+.grid__cta {
+	border-top: 1px solid #fff;
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
+	background-color: #cb030b;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 30px 0;
+}
+
+.cta__image {
+	background: url("../images/stubru/cta.jpg") no-repeat center center;
+	background-size: cover;
+	width: 85px;
+	height: 85px;
+	border-radius: 50%;
+	margin-bottom: 10px;
+}
+
+.cta__content {
+	text-align: center;
+}
+
+.cta__content h2 {
+	text-transform: uppercase;
+	font-size: 22px;
+	margin: 10px 0;
+	font-weight: bold;
+}
+
+.cta__song {
+	text-transform: uppercase;
+	font-size: 18px;
+	margin-top: 25px;
+	font-weight: 500;
+}
+
+.cta__song span {
+	margin-right: 5px;
+}
+
+.cta__songtitle {
+	font-style: italic;
+	font-weight: 300;
+	font-size: 18px;
+	margin-bottom: 25px;
+}
+
+button {
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #fff;
+	background-color: #cb030b;
+	border: 1px solid #fff;
+	border-radius: 8px;
+	font-size: 18px;
+	padding: 12px 20px;
+	margin-bottom: 15px;
+}
+
+button:hover {
+	cursor: pointer;
+	background-color: #fff;
+	color: #cb030b;
+}
+
+button span {
+	margin-right: 8px;
+}
+
+.cta__links p {
+	display: inline-block;
+	margin: 10px 0 0 ;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.cta__links p:first-child {
+	margin-right: 15px;
+}
+
+.grid__content {
+	position: relative;
+	z-index: 10;
+}
+
+.content__primair {
+	padding: 20px;
 }
 
 .content__primair h4 {
@@ -228,6 +432,23 @@ body.sidebar--active #sidebar {
 	background: url("../images/stubru/tag-line.png") no-repeat;
 }
 
+.content__secundair {
+	max-height: 0;
+	opacity: 0;
+	overflow: hidden;
+	transition: max-height .3s ease .1s, opacity .3s ease .1s;
+}
+
+.content__secundair p {
+	padding-top: 10px;
+}
+
+.item__hover:hover .content__secundair {
+	max-height: 200px;
+	opacity: 1;
+	transition: max-height .7s ease .3s, opacity .3s ease .3s;
+}
+
 .timestamp__icon {
 	margin-right: 5px;
 }
@@ -241,24 +462,187 @@ body.sidebar--active #sidebar {
 	}
 }
 
+@media (min-width: 480px) {
+	.grid__item {
+		min-height: 550px;
+	}
+}
+
 @media (min-width: 660px) {
 	.hamburger__tooltip {
 		display: block;
 	}
+
+	.grid__item {
+		min-height: 340px;
+	}
+
+	.grid__item h1 {
+		font-size: 6vw;
+		line-height: 6vw;
+	}
+
+	.grid__row--middle {
+		flex-direction: row;
+	}
+
+	.grid__row--middle .grid__item {
+		flex: 1;
+		min-height: 300px;
+	}
+
+	.grid__row--middle .grid__item:first-child { 
+		border-right: none;
+	}
+
+	.grid__row--middle .grid__item:nth-child(2) { 
+		display: none;
+	}
+
+	.grid__row--middle .grid__cta {
+		display: flex;
+	}
+
+	.grid__row--middle .grid__item h1 {
+		font-size: 3vw;
+		line-height: 3vw;
+	}
+
+	.grid__row--right .grid__item h1 {
+		font-size: 3vw;
+		line-height: 3vw;
+	}
 }
 
 @media (min-width: 768px) {
+	.grid__item {
+		min-height: 450px;
+	}
 
+	.grid__row--middle .grid__item {
+		min-height: 400px;
+	}
 }
 
 @media (min-width: 960px) {
+	.grid__row--md {
+		flex-direction: row;
+	}
 
+	.grid__row--middle {
+		flex-direction: column;
+	}
+
+	.grid__row--md .grid__item {
+		flex: 1;
+	}
+
+	.grid__row--md .grid__item--big {
+		flex: 2;
+		min-height: 700px;
+	}
+
+	.grid__row--middle .grid__item {
+		min-height: 280px;
+	}
+
+	.content__primair {
+		padding: 25px;
+	}
+
+	.grid__item--big .content__primair {
+		padding: 50px;
+	}
+
+	.cta__image {
+		height: 55px;
+		width: 55px;
+	}
+
+	.grid__cta {
+		padding: 0;
+	}
+
+	.grid__item h1 {
+		font-size: 4.5vw;
+		line-height: 4.5vw;
+	}
+	
+	.grid__row--middle .grid__item:first-child { 
+		border-right: 1px solid #fff;
+	}
+
+	.grid__row--middle .grid__item { 
+		border-right: 1px solid #fff;
+		border-left: none;
+	}
+
+	.grid__row--right .grid__item { 
+		border-right: 1px solid #fff;
+		border-left: none;
+	}
 }
 
 @media (min-width: 1200px) {
+	.grid__row--right {
+		display: flex;
+	}
 
+	.grid__row--right .item__big {
+		display: none;
+	}
+
+	.grid__row--right .grid__item {
+		min-height: 300px;
+	}
+
+	.grid__row--md .grid__item--big {
+		flex: 1;
+	}
+
+	.grid__row--middle {
+		flex-direction: row;
+	}
+	
+	.grid__row--middle .grid__item h1 {
+		font-size: 2vw;
+		line-height: 2vw;
+	}
+
+	.grid__row--right .grid__item h1 {
+		font-size: 2vw;
+		line-height: 2vw;
+	}
 }
 
 @media (min-width: 1600px) {
+	.grid__row--md .grid__item--big {
+		flex: .7;
+	}
 
+	.grid__row--middle .grid__item:nth-child(2) {
+		display: flex;
+	}
+
+	.grid__item h1 {
+		font-size: 3vw;
+		line-height: 3vw;
+	}
+
+	.grid__row--middle .grid__item h1 {
+		font-size: 1.5vw;
+		line-height: 1.5vw;
+	}
+
+	.grid__row--right {
+		flex-direction: row;
+	}
+
+	.grid__row--right .grid__item:first-child{
+		flex: 2;
+	}
+
+	.grid__row--right .item__big {
+		display: flex;
+	}
 }
